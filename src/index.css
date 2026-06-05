@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Didot", "Bodoni MT", Georgia, serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-nevada: "Nevada Serial", serif;
+  --color-gold: rgb(173, 121, 31);
+}
+
+@font-face {
+  font-family: "Nevada Serial";
+  src: url("/fonts/NevadaSerial-Light.otf") format("opentype");
+}
+
+@layer base {
+  body {
+    @apply m-0 antialiased;
+  }
+}
+
+@keyframes about-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-about-marquee {
+  animation: about-marquee 28s linear infinite;
+}
